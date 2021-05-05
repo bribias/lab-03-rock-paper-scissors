@@ -1,4 +1,11 @@
 // import functions and grab DOM elements
+const button = document.querySelector('#guess-button');
+const currentResultDiv = document.querySelector('#current-result');
+const winsDiv = document.querySelector('#total-wins');
+const lossesDiv = document.querySelector('#total-losses');
+
+console.log(button, currentResultDiv, winsDiv, lossesDiv);
+
 
 // initialize state
 
