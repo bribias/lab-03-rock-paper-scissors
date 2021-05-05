@@ -14,37 +14,33 @@
 
 <body>
     <header>
-        <div class="gutter-right logo">
-            <img src="assets/big-logo.png" />
-        </div>
+
     </header>
     <main>
         <section class="main-section">
             <label>
-                Rock
-                    <input name="rps" type="radio" />
-            </label>
-            <label>
-                Scissors
+                <img src="assets/rock.png">
                 <input name="rps" type="radio" />
             </label>
-            <label>Paper
-                    <input name="rps" type="radio" />
-            </label>
-            
-            <button id="guess-button">
-                Take your chances!
-            </button>
-            <div id="current-result"></div>
-            <div id="total-wins"></div>
-            <div id="total-losses"></div>
-        </section>
-    </main>
-    <footer>
-        <div class="copy gutter-right">&copy; 2020 Alchemy Code Lab</div>
-    </footer>
 
-    <script type="module" src="./app.js"></script>
+            <label>
+                <img src="assets/paper.png">
+                <input name="rps" type="radio" />
+            </label>
+
+            <label>
+                <img src="assets/scissors.png">
+                <input name="rps" type="radio" />
+            </label>
+        </section>
+        <button id="guess-button">
+            Take your chances!
+        </button>
+        <div id="current-result"></div>
+        <div id="total-wins"></div>
+        <div id="total-losses"></div>
+
+        <script type="module" src="./app.js"></script>
 </body>
 
 </html>
