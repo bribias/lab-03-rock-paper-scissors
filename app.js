@@ -25,14 +25,15 @@ button.addEventListener('click', () => {
 
     const selectedRadio = document.querySelector('input:checked');
     const userGuess = selectedRadio.value;
-  
+    console.log(winsDiv, userGuess, randomNumber, totalWins);
+
     const userWon = didUserGuessCorrect(userGuess, actualFlip);
 
     if (userWon) {
         totalWins++;
-        currentResultDiv.textContent('HEYOHHHH YOU GOT IT!');
+        currentResultDiv.textContent = 'HEYOHHHH YOU GOT IT!';
     } else {
-        currentResultDiv.textContent('WOMP WOMPPPPP. Try again!');
+        currentResultDiv.textContent = 'WOMP WOMPPPPP. Try again!';
     }
 
     totalGuesses++;
