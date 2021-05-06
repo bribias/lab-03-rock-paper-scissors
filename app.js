@@ -1,5 +1,6 @@
 // import functions and grab DOM elements
 import { didUserGuessCorrect } from './utils.js';
+import { didUserWin } from './utils.js';
 
 const button = document.querySelector('#guess-button');
 const currentResultDiv = document.querySelector('#current-result');
@@ -10,24 +11,15 @@ const lossesDiv = document.querySelector('#total-losses');
 // initialize state
 let totalGuesses = 0;
 let totalWins = 0;
-let randomNumber = Math.ceil(Math.random() * 9);
 
 // set event listeners 
 button.addEventListener('click', () => {
 
-    let actualFlip;
-
-    if (randomNumber) {
-        actualFlip = 'rock';
-    } else {
-        actualFlip = 'scissors';
-    } 
-
     const selectedRadio = document.querySelector('input:checked');
     const userGuess = selectedRadio.value;
-    console.log(winsDiv, userGuess, randomNumber, totalWins);
+    let randomNumber = Math.ceil(Math.random() * 3);
+    const userWon = didUserGuessCorrect(userGuess, randomNumber);
 
-    const userWon = didUserGuessCorrect(userGuess, actualFlip);
 
     if (userWon) {
         totalWins++;
@@ -37,9 +29,10 @@ button.addEventListener('click', () => {
     }
 
     totalGuesses++;
-// update DOM to reflect the new state
+    // update DOM to reflect the new state
 
     winsDiv.textContent = `You killed it ${totalWins}`;
     lossesDiv.textContent = `You failed ${totalGuesses - totalWins}`;
 
 });
+
