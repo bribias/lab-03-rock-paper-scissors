@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/home.css">
-    <title>Document</title>
+    <title>Rock, Paper, Scissors</title>
 </head>
 
 <body>
@@ -20,25 +20,24 @@
         <section class="main-section">
             <label>
                 <img src="assets/rock.png">
-                <input name="rps" type="radio" />
+                <input name="rps" type="radio" value="rock"/>
             </label>
 
             <label>
                 <img src="assets/paper.png">
-                <input name="rps" type="radio" />
+                <input name="rps" type="radio" value="paper" />
             </label>
 
             <label>
                 <img src="assets/scissors.png">
-                <input name="rps" type="radio" />
+                <input name="rps" type="radio" value="scissors" />
             </label>
         </section>
-        <button id="guess-button">
-            Take your chances!
-        </button>
+        <button id="guess-button">Take your chances!</button>
         <div id="current-result"></div>
         <div id="total-wins"></div>
         <div id="total-losses"></div>
+        <div id="total-ties"></div>
 
         <script type="module" src="./app.js"></script>
 </body>
