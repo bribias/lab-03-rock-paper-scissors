@@ -1,6 +1,3 @@
-
-
-
 export function didUserGuessCorrect(computerThrow) {
     if (computerThrow === 1) {
         return 'rock';
