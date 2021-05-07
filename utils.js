@@ -1,14 +1,23 @@
-export function didUserGuessCorrect(userGuess, computerThrow) {
-    if (userGuess === computerThrow) return true;
-    else return false;
-}
+// export function didUserGuessCorrect(computerThrow) {
+//     if (computerThrow === 1) {
+//         return 'rock';
+//     }
+//     if (computerThrow === 2) {
+//         return 'paper';
+//     }
+//     if (computerThrow === 3) {
+//         return 'scissors';
+//     }
+// }
 
-function didUserWin(userThrow, computerThrow) {
-    if (
-        (userThrow === 'rock' && computerThrow === 'scissors')
-        || (userThrow === 'scissors' && computerThrow === 'paper')
-        || (userThrow === 'paper' && computerThrow === 'rock')
-    ) {
-        return true;
+export function didUserWin(userGuess, computerThrow) {
+    if (userGuess === 'rock' && computerThrow === 'scissors'
+        || userGuess === 'scissors' && computerThrow === 'paper'
+        || userGuess === 'paper' && computerThrow === 'rock') {
+        return 'win';
+    } else if (userGuess === computerThrow) {
+        return 'draw';
+    } else {
+        return 'lose';
     }
 }
