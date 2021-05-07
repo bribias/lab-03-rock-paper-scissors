@@ -8,6 +8,7 @@ const winsDiv = document.querySelector('#total-wins');
 const lossesDiv = document.querySelector('#total-losses');
 const tiesDiv = document.querySelector('#total-ties');
 
+
 // initialize state
 const choice = ['rock', 'paper', 'scissors'];
 let totalGuesses = 0;
@@ -34,7 +35,9 @@ button.addEventListener('click', () => {
     console.log(compSelect);
     totalGuesses++;
     // update DOM to reflect the new state
+  
     winsDiv.textContent = `You killed it ${totalWins}`;
     lossesDiv.textContent = `You failed ${totalGuesses - totalWins}`;
     tiesDiv.textContent = `You tied ${totalTies}`;
 });
+
